@@ -6,7 +6,7 @@
 #    By: tatashir <tatashir@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/30 16:03:12 by tatashir          #+#    #+#              #
-#    Updated: 2023/02/22 17:59:51 by tatashir         ###   ########.fr        #
+#    Updated: 2023/02/22 18:01:28 by tatashir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,4 +16,4 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-SRCS
+SRCS = so_long.c
