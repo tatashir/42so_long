@@ -6,8 +6,13 @@
 /*   By: tatashir <tatashir@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:01:59 by tatashir          #+#    #+#             */
-/*   Updated: 2023/02/22 18:02:15 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/02/22 19:03:07 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+int	main(int argc, char **argv)
+{
+	t_solong	solong;
+}
