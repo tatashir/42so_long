@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:01:59 by tatashir          #+#    #+#             */
-/*   Updated: 2023/02/22 19:03:07 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/02/26 15:33:26 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,7 @@
 int	main(int argc, char **argv)
 {
 	t_solong	solong;
+	t_map		map;
+
+	return (0);
 }
