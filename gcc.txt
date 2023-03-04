@@ -1,0 +1,3 @@
+gcc *.c so_long.h -lmlx -framework OpenGL -framework AppKit
+
+
