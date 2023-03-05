@@ -36,6 +36,12 @@ void	check_map(t_map *map)
 	row_cnt = 0;
 	while (y + map->start_row <= map->end_row)
 	{
-		if (!ft_strncmp(map->line[]))
+		if (!ft_strncmp(map->line[y + map->start_row], "\n", 1))
+			error_map(map->line, map->row, ERROR_CLOSEMAP);
+		check_rect_wall();
+		check_item();
+		y++;
 	}
 }
+
+void	check_rect_wall
