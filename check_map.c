@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:32:17 by tatashir          #+#    #+#             */
-/*   Updated: 2023/03/04 17:53:12 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/03/07 15:02:30 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,26 @@ void	check_map(t_map *map)
 	}
 }
 
-void	check_rect_wall
+void	check_wall(char *s, t_map *map, int y)
+{
+	int	i;
+
+	if (map->col != (int)ft_strlen(s) -1)
+		error_map(map->line, map->row, ERROR_RECT);
+	if (y == 0 || y == map->end_row)
+	{
+		i = 0;
+		while (s[i] != '\n')
+		{
+			if (s[i] != '1')
+				error_map(map->line, map->row, ERROR_WALL);
+			i++;
+		}
+	}
+	else
+	{
+		if (s[0] != '1' || s[map->col - 1] != '1')
+			error_map(map->line, map->row, ERROR_WALL);
+	}
+}
+
