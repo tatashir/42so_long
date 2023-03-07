@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:32:17 by tatashir          #+#    #+#             */
-/*   Updated: 2023/03/07 19:24:47 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/03/07 20:12:02 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ void	check_pre(int argc, char **argv)
 
 void	check_map(t_map *map)
 {
-	int y;
-	int row_cnt;
+	int	y;
+	int	row_cnt;
 
 	y = 0;
-	map->col = ft_strlen(map->line[y + map->start_row]) -1;
+	map->col = ft_strlen(map->line[y + map->start_row]) - 1;
 	row_cnt = 0;
 	while (y + map->start_row <= map->end_row)
 	{
@@ -69,11 +69,12 @@ void	check_wall(char *s, t_map *map, int y)
 
 void	check_items(char *s, t_map *map, int y)
 {
-	static int i_end_cnt[2];
+	static int	i_end_cnt[2];
 
 	while (*s != '\n')
 	{
-		if (*s != '1' && *s != '0' && *s != 'C' && *s != 'E' &&*s != 'E' && *s != 'P')
+		if (*s != '1' && *s != '0' && *s != 'C' && 
+				*s != 'E' &&*s != 'E' && *s != 'P')
 			error_map(map->line, map->row, ERROR_ITEM);
 		else if (*s == 'C')
 			map->c_cnt++;
@@ -81,3 +82,4 @@ void	check_items(char *s, t_map *map, int y)
 			i_end_cnt[0]++
 	}
 }
+
