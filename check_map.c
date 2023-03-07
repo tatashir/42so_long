@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:32:17 by tatashir          #+#    #+#             */
-/*   Updated: 2023/03/07 15:02:30 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/03/07 15:54:33 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,3 +67,12 @@ void	check_wall(char *s, t_map *map, int y)
 	}
 }
 
+void	check_items(char *s, t_map *map, int y)
+{
+	static int i_end_cnt[2];
+
+	while (*s != '\n')
+	{
+		if (*s != '1' && *s != )
+	}
+}
