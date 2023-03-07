@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:32:17 by tatashir          #+#    #+#             */
-/*   Updated: 2023/03/07 15:54:33 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/03/07 19:24:47 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,11 @@ void	check_items(char *s, t_map *map, int y)
 
 	while (*s != '\n')
 	{
-		if (*s != '1' && *s != )
+		if (*s != '1' && *s != '0' && *s != 'C' && *s != 'E' &&*s != 'E' && *s != 'P')
+			error_map(map->line, map->row, ERROR_ITEM);
+		else if (*s == 'C')
+			map->c_cnt++;
+		else if (*s == 'E')
+			i_end_cnt[0]++
 	}
 }
