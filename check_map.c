@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 16:32:17 by tatashir          #+#    #+#             */
-/*   Updated: 2023/03/07 20:12:02 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/03/08 19:23:54 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,3 +83,30 @@ void	check_items(char *s, t_map *map, int y)
 	}
 }
 
+void	count_mapsize(char *buf, int *set_row)
+{
+	int	row_cnt;
+	int col_cnt;
+	char	*tmp;
+
+	row_cnt = 0;
+	col_cnt = 0;
+	tmp = buf;
+	while (*tmp)
+	{
+		if (*tmp == '\n')
+		{
+			row_cnt++;
+			col_cnt = 0;
+		}
+		else
+			col_cnt++;
+		if (col_cnt > MAX_MAP_COL || row_cnt > MAX_FILE_ROW)
+		{
+			free(buf);
+			exit_error(ERROR_BIG_MAP);			
+		}
+		tmp++;
+	}
+	*set_row = row_cnt;
+}

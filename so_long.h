@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 18:02:32 by tatashir          #+#    #+#             */
-/*   Updated: 2023/03/04 17:53:14 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/03/08 19:14:58 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ typedef struct s_map{
 	int	fd;
 	char	*filepath;
 	char	**line;
+	int		start_row;
+	int 	end_row;
+	int 	c_cnt;
+	int		row;
 	int		col;
 };	t_map
 
