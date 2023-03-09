@@ -20,7 +20,7 @@ static void	change_code(t_solong *sl, int next_y, int next_x)
 		sl->cler = true;
 }
 
-move_up(t_solong *sl, char point)
+void	move_up(t_solong *sl, char point)
 {
     char    c;
 
@@ -44,4 +44,14 @@ move_up(t_solong *sl, char point)
     init_after_move(sl);
 }
 
-{}
+void	move=left(t_solong *sl, char point)
+{
+	char	c;
+
+	c = sl->line[sl->y][sl->x - 1];
+	if (c == '1')
+		return ;
+	else if (c == '0')
+	{
+		sl->line[sl->y][sl->x - 1] = 'P';
+		sl->line[sl->
